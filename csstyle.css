@@ -1,0 +1,43 @@
+.navbar{
+	font-size: 20px;
+  		letter-spacing: 4px;
+}
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.0);
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 40px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+
+}
+.header-image
+{
+    background-image: url(lap.jpg);
+    background-repeat: no-repeat;
+    height: 450px;
+}
+.row{
+    margin-top: 120px;
+}
+.header-image1
+{
+    background-image: url(home.jpg);
+    background-repeat: no-repeat;
+    height: 450px;
+}
+.header-image2
+{
+    background-image: url(contact.jpg);
+    background-repeat: no-repeat;
+    height: 450px;
+}
+.row1 {
+    margin-top: 120px;
+}
+.header-image3
+{
+    background-image: url(home.jpg);
+    background-repeat: no-repeat;
+    height: 450px;
+   
+}
