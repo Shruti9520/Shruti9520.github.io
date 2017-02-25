@@ -27,7 +27,7 @@
     <button type="button" class="navbar-toggle" data-toggle="collapse">
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
-                </button>
+    </button>
 
       <a class="navbar-brand" href="index.html"><strong>Shruti Singh</strong></a>
     </div>
@@ -36,7 +36,7 @@
       <li ><a href="index.html"><strong>Home</strong></a></li>
       <li><a href="home.html"><strong>About Me</strong></a></li>
       
-      
+    
     </ul>
   </div>
   </div>
@@ -45,15 +45,13 @@
 <!--Navbar ends here-->
 <!--page header-->
 
-    <header class="header-image3">
+    <header class="header-image">
        <div class="container">
             <div class="row text-center">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h2 style="color:white"><strong>Thanks</strong></h2>
+                        <h2 style="color:white"><strong>Squashing Commits</strong></h2>
                         <hr class="small">
-                        <span class="subheading" style="color:white"><strong>Don’t grieve. Anything you lose comes round in another form.
-</strong></span>
                     </div>
                 </div>
             </div>
@@ -64,18 +62,57 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-                    <h1><strong>Thanks for always motivating me !</strong>.</h1><br><br>
-    <p style="font-family:sans-serif;">"The most important thing is to start"-He told me couple of months ago. He gave me a kick to start learning things and I am very thankful for this. Thanks <strong>Mohit Kumar Bajoria</strong>, one of the coolest person I have ever met with.</p>
-                    
-                
-                
-                
-            </div>
-        </div>
-    </div>
-    </div>
+                    <h1>Step by Step Instructions</h1>
+                  <br>
+                  <br>
+                 <p style="font-family:sans-serif;font-size:20px;">1.Run the following command to see list of your most recent commits<br><br>
+                   <code>$ git log --pretty=oneline --abbrev-commit</code><br><br>
+                   This might look some thing like this-<br>
+                   <code>ddef6dd First commit message<br>
+                          02221a7 Second commit message<br>
+                          74abb12 Third commit message<br>
+                          8ca46ba Fourth commit message<br>
+                         7255abb Fifth commit message<br><br>
+                         ...other commits from where you forked Push...</code>
+                </p>
+                  <br>
+                <p style="font-family:sans-serif;font-size:20px;">2.Your goal is to squash the first three most recent commits(ddef6dd, 02221a7,74abb12).For this run the following command-<br>
+                <br>
+                  <code>$ git rebase -i HEAD~3</code><br><br>
+                Your editor will open with a file that looks something like this (note that the commits are listed in reverse chronological order):<br>
+                  <code>pick 74abb12 Third commit message<br>
+                        pick 02221a7 Second commit message<br>
+                        pick ddef6dd First commit message<br><br><br>
+                        # Rebase ddef6dd..7255abb onto 7255abb<br><br>
+                        # Commands:<br><br>
+                        #  p, pick = use commit<br><br>
+                        #  r, reword = use commit, but edit the commit message<br><br>
+                        #  e, edit = use commit, but stop for amending<br><br>
+                        #  s, squash = use commit, but meld into previous commit<br><br>
+                        #  f, fixup = like "squash", but discard this commit's log message<br><br>
+                        #  x, exec = run command (the rest of the line) using shell<br>
+                        #<br>
+                        # These lines can be re-ordered; they are executed from top to bottom.<br>
+                        #<br>
+                        # If you remove a line here THAT COMMIT WILL BE LOST.<br>
+                        #<br>
+                        # However, if you remove everything, the rebase will be aborted.<br>
+                        #<br>
+                        # Note that empty commits are commented out<br><br><br>
+                  </code>
+                </p>
+                  
+                  <p style="font-family:sans-serif;font-size:20px;"> 3.Change the file so that squash appears next to the commits you wish to squash, leaving pick next to the commit message you intende to preserve.
+                  A new editor may open, in which you can change the commit message if you wish. Otherwise, save and close the file, and you’re done.</p>
+                  <br><br>
+                  <p style="font-family:sans-serif;font-size:20px;"> 4.If you have pushed to your remote prior to squashing commits, you will need to run <code>git push -f </code>with the name of your branch to force GitHub to update your remote repository. </p>
+              </div>
+               </div>
+           </div>
+       </div>
     
-        <!--footer-->    
+  
+    <!--footer-->    
         <footer>
         <div class="container">
             <div class="row">
@@ -90,7 +127,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/profile.php?id=100004650371891&__mref=message_bubble">
+                            <a href="https://www.facebook.com/profile.php?id=100004650371891">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -106,7 +143,7 @@
                             </a>
                         </li>
                          <li>
-                            <a href="https://www.linkedin.com/nhome/?trk=">
+                         <a href="https://www.linkedin.com/nhome/?trk=">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -119,9 +156,6 @@
             </div>
         </div>
     </footer>
-
-        
-    
 
 </body>
 </html>
